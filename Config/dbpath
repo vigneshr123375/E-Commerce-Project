@@ -1,0 +1,45 @@
+C:\Program Files\MongoDB\Server\4.4\bin
+
+1.mongo
+2.show dbs
+3.use shopping
+4.show collections
+5.db.cart.find()
+6.db.cart.find().pretty()
+
+
+{ 
+    "_id" : ObjectId("605c48bfa84e670a70a6539a"), 
+    "Name" : "Revlutionary Andriod Oneplus", 
+    "Price" : "11400"
+}
+{ 
+    "_id" : ObjectId("605c48e1a84e670a70a6539b"), 
+    "Name" : "Vincero Watches | Vincero Collective", 
+    "Price" : "600"
+}
+{ 
+    "_id" : ObjectId("605c490aa84e670a70a6539c"), 
+    "Name" : "Vostro 15 3501 | Laptop", 
+    "Price" : "24000"
+}
+{ 
+    "_id" : ObjectId("605c493ba84e670a70a6539d"), 
+    "Name" : "Adult T-Shirt | Hobby Lobby", 
+    "Price" : "670"
+}
+{ 
+    "_id" : ObjectId("605c4950a84e670a70a6539e"), 
+    "Name" : "Best white T-shirt for men 2021", 
+    "Price" : "1500"
+}
+{ 
+    "_id" : ObjectId("605c4966a84e670a70a6539f"), 
+    "Name" : "BOSS Airpods Bluetooth Headset", 
+    "Price" : "2400"
+}
+{ 
+    "_id" : ObjectId("605c497ca84e670a70a653a0"), 
+    "Name" : "Vincero Watches | Vincero Collective", 
+    "Price" : "600"
+}

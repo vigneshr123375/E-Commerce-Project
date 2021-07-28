@@ -1,0 +1,57 @@
+<style>
+    img {
+        width: 200px;
+        height: auto;
+    }
+
+    .image {
+       
+       float: right;
+       margin-right: -30rem;
+       margin-top: -22rem;
+    }
+
+    .img-name {
+        font-size: 2rem;
+        margin-left: 7rem;
+    }
+</style>
+
+
+<section class="bg-dark text-white" style="height:100vh;">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6" style="margin: 0 auto;">
+                <h2 class="text-center text-white mt-3">Edit Product</h2>
+                <form action="/admin/edit-product/{{product._id}}" method="POST" enctype="multipart/form-data">
+                    <label for="">No.</label>
+                    <input type="text" required name="No" class="form-control" value="{{product.No}}">
+
+                    <label for="">Name</label>
+                    <input type="text" required name="Name" class="form-control" value="{{product.Name}}">
+
+                    <label for="">Price</label>
+                    <input type="text" required name="Price" class="form-control" value="{{product.Price}}">
+
+
+
+                    <button type="submit" class="btn btn-success mt-4">Update</button>
+
+                    <div class="col-md-6 image">
+                        <label for="" class="img-name">Image</label>
+                        <img src="/product-images/{{product._id}}.jpg" alt="Loading" id="img-show">
+                        <input type="file" name="Image" class="form-control" onchange="imageView(event)">
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    function imageView(event){
+        document.getElementById('img-show').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>

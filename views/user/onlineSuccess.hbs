@@ -1,0 +1,66 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .btn-default:hover {
+        background: #d9534f;
+        color: #fff;
+    }
+</style>
+
+
+
+<button type="button" style="visibility: hidden;" id="btn" class="btn btn-success btn-lg" data-toggle="modal"
+    data-target="#success">Transaction
+    Success</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="success" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content" style="border:none;border-radius: 5px;">
+            <div class="modal-header"
+                style="background:#1ab394;border-top-left-radius: 5px; border-top-right-radius: 5px;">
+
+                <h4 class="modal-title text-center"><img
+                        src="https://lh3.googleusercontent.com/-Zxh4srAEtU0/Wp0cZV-PJuI/AAAAAAAAD4E/En5x5c53s44jzvG8M0sSyFZXoRhGXfBzwCL0BGAYYCw/h100/2018-03-05.png"
+                        alt=""></h4>
+            </div>
+
+            <div class="modal-body">
+                <p style="text-align:center;color:#1ab394;font-size:24px;font-weight:500;">Cheers! Payment Successful!
+                </p>
+                <p style="color:#555555;">Transaction ID:&nbsp;<strong
+                        style="font-weight:500;font-size:16px;color: #222222;">152458258752515</strong><br>Payment
+                    amount:&nbsp;<strong style="font-weight:500;font-size:16px;color: #222222;"></strong><br>The
+                    above rent shall credited to your landlord's bank account in<strong
+                        style="font-weight:500;font-size:15px;color: #222222;"> 3 working days</strong></p>
+            </div>
+
+            <div class="modal-footer">
+                <a href="/myOrders"><button type="button" class="btn btn-default">Close</button></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    window.onload = function () {
+        document.getElementById('btn').click();
+
+        var scriptTag = document.createElement("script");
+        scriptTag.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js";
+        document.getElementsByTagName("head")[0].appendChild(scriptTag);
+    }
+</script>

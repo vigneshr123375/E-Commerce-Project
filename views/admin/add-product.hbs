@@ -1,0 +1,30 @@
+<section class="bg-dark text-white" style="height:100vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" style="margin: 0 auto;">
+                <h2 class="text-center text-white mt-3">Add Product</h2>
+                <form action="/admin/add-product" method="POST" enctype="multipart/form-data">
+                    <label for="">No.</label>
+                    <input type="text" required name="No" class="form-control">
+
+                    <label for="">Name</label>
+                    <input type="text" required name="Name" class="form-control">
+
+                    <label for="">Price</label>
+                    <input type="text" required name="Price" class="form-control">
+
+                    <label for="">Image</label>
+                    <input type="file" name="Image" class="form-control">
+
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+
+                    {{#if name}}
+
+                    <p class="text-success" style="text-align: center; margin-top:1rem; font-size:18px;">{{name}} is
+                        added to the database</p>
+                    {{/if}}
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

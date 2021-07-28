@@ -1,0 +1,101 @@
+<style>
+  .cart {
+    position: relative;
+    float: right;
+
+  }
+
+  .shopping-cart {
+    position: absolute;
+    display: inline-block;
+    background: url('http://cdn1.iconfinder.com/data/icons/jigsoar-icons/24/_cart.png') no-repeat 0 0;
+    width: 30px;
+    height: 30px;
+    right: 13rem;
+    top: 1.5rem;
+
+  }
+
+  .badge-parent {
+    position: relative;
+
+  }
+
+  .badge-cart {
+
+    padding: 3px;
+    position: absolute;
+    left: 75rem;
+    right: 0;
+    top: 5px;
+    width: 20px;
+    height: auto;
+
+
+  }
+</style>
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light  " style="margin-bottom: 0px; background:ghostwhite; ">
+  <div class="container-fluid ">
+    <a class="navbar-brand" href="/">E-Commerce</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" style="text-decoration: none;" aria-current="page" href="/"
+            style="color: #7289ab;">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cart" style="color: #292929; text-decoration: none;">Cart </a>
+        </li>
+        {{#if user}}
+        <li class="nav-item">
+          <a class="nav-link" href="/myOrders" style="color: #292929; text-decoration: none;">Orders</a>
+        </li>
+
+        {{/if}}
+
+
+        
+      </ul>
+      {{#if user}}
+      <a class="badge-parent" href="/cart"><span class="cart"><i class="shopping-cart"></i></span><span
+          class=" badge-cart badge badge-success bg-success " id="cartcount"
+          style="background: #7289ab;">{{cartCount}}</span></a>
+      {{/if}}
+      
+      <div class="dropdown" style="float: right; margin-right:1rem;">
+        <button class="btn btn-success dropdown-toggle " style="margin:1rem 0" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+          {{#if user}}
+          {{user.Name}}
+
+          {{else}}
+          Account
+          {{/if}}
+
+        </button>
+        <div class="dropdown-menu" style="min-width: 100px;" aria-labelledby="dropdownMenuButton">
+          {{#if user}}
+          <a class="dropdown-item" style="text-decoration: none;" href="/logout">Logout</a>
+
+          {{else}}
+          <a class="dropdown-item" style="text-decoration: none;" href="/login">Login</a>
+          {{/if}}
+
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</nav>

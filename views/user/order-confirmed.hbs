@@ -1,0 +1,100 @@
+<style>
+    body {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+
+
+
+    .modal-body {
+        background-color: #fff;
+        border-color: #fff
+    }
+
+    .close {
+        color: #000;
+        cursor: pointer
+    }
+
+    .close:hover {
+        color: #000
+    }
+
+    .theme-color {
+        color: #004cb9
+    }
+
+    hr.new1 {
+        border-top: 2px dashed #fff;
+        margin: 0.4rem 0
+    }
+
+    .btn-primary {
+        color: #fff;
+        background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+
+        padding: 12px;
+        padding-right: 30px;
+        padding-left: 30px;
+        border-radius: 1px;
+        font-size: 17px
+    }
+
+    .btn-primary:hover {
+        color: #fff;
+        background: linear-gradient(115deg, #61f2ff 10%, #ae00ff 90%);
+        border-color: #004cb9;
+
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<button type="button" id="btn" style="visibility: hidden;" class="btn btn-primary launch" data-toggle="modal"
+    data-target="#staticBackdrop"> <i class="fa fa-info"></i> Get information
+</button>
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body  ">
+                <a href="/end" class="text-right"><i class="fa fa-close close"></i></a>
+                <div class="px-4 py-5">
+                    <h5 class="text-uppercase text-center" style="font-size: 3rem;color:#ae00ff;">Hi! {{user.Name}}</h5>
+                    <h4 class="mt-5 text-center theme-color mb-5" style="font-size: 2rem;">Thankyou for Your Order</h4>
+                    <a href="/myOrders" style="text-align:center;padding-left: 17rem;">Go to Orders</a>
+
+                    <div class="text-center mt-5 ">
+
+                        <a href="/trackOrder" class="btn btn-primary">Track Your Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        document.getElementById('btn').click();
+
+        var scriptTag = document.createElement("script");
+        scriptTag.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js";
+        document.getElementsByTagName("head")[0].appendChild(scriptTag);
+    }
+</script>
